@@ -9,4 +9,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./test-setup.ts",
   },
+  server: {
+    host: true,
+  },
 });
