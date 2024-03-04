@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:16
+FROM node:19
 
 # Set the working directory in the container
 WORKDIR /app
@@ -17,8 +17,8 @@ RUN pnpm install
 # Copy the rest of your application code to the working directory
 COPY . .
 
-# Expose a port to communicate with the React app
+# Expose port 5173 for the NextJS application
 EXPOSE 5173
 
-# Start your React app
+# Start the application in development mode
 CMD ["pnpm", "run", "dev"]
